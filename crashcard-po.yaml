@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: crashcart
+spec:
+  containers:
+  - image: quay.io/lander2k2/crashcart
+    command: ["sleep", "86400"]
+    name: crashcart
+  restartPolicy: Always
+
