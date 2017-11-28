@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: crashcart-iperf-server
+  labels:
+    app: iperf
+    role: server
+spec:
+  containers:
+  - image: quay.io/lander2k2/crashcart
+    command: ["iperf", "-s"]
+    name: crashcart-iperf-server
+  restartPolicy: Always
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: crashcart-iperf-server
+spec:
+  selector:
+    app: iperf
+    role: server
+  ports:
+  - port: 5001
+    protocol: TCP
+

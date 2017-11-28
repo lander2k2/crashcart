@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: crashcart-iperf-client
+spec:
+  parallelism: 2
+  template:
+    spec:
+      containers:
+      - image: quay.io/lander2k2/crashcart
+        command: ["iperf", "-c", "crashcart-iperf-server"]
+        name: crashcart-iperf-client
+      restartPolicy: OnFailure
+
