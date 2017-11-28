@@ -7,5 +7,6 @@ spec:
   - image: quay.io/lander2k2/crashcart
     command: ["sleep", "86400"]
     name: crashcart
+    imagePullPolicy: Always
   restartPolicy: Always
 
