@@ -7,5 +7,8 @@ RUN apt-get update && apt-get install -y \
       iputils-ping \
       jq \
       python \
+      speedtest-cli \
       vim
+
+CMD ["sleep", "86400"]
 

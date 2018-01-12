@@ -14,7 +14,7 @@ $ kubectl exec -it crashcart bash
 To run container on a docker host:
 
 ```
-$ docker run -d --name crashcart quay.io/lander2k2/crashcart sleep 86400
+$ docker run -d --name crashcart quay.io/lander2k2/crashcart
 $ docker exec -it crashcart bash
 ```
 
