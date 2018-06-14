@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: test-svc
+spec:
+  type: LoadBalancer
+  selector:
+    app: test
+  ports:
+  - port: 80
+    targetPort: 80
+
