@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  labels:
+    app: crashcart
+  name: crashcart
+spec:
+  selector:
+    matchLabels:
+      app: crashcart
+  template:
+    metadata:
+      labels:
+        app: crashcart
+    spec:
+      containers:
+      - image: quay.io/lander2k2/crashcart
+        imagePullPolicy: Always
+        name: crashcart
+      tolerations:
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/master
+

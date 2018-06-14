@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: crashcart
+  name: crashcart
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: crashcart
+  template:
+    metadata:
+      labels:
+        app: crashcart
+    spec:
+      containers:
+      - image: quay.io/lander2k2/crashcart
+        name: crashcart
+        imagePullPolicy: Always
+      restartPolicy: Always
+
