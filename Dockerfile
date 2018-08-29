@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
       jq \
       python \
       speedtest-cli \
+      stress \
       vim
 
 CMD ["sleep", "86400"]
