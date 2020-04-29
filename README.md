@@ -7,7 +7,7 @@ Wheel it into your cluster with you.  It has your tools on it.
 To run crashcart pod in default namespace of K8s cluster:
 
 ```
-$ kubectl create -f https://raw.githubusercontent.com/lander2k2/crashcart/master/crashcard-po.yaml
+$ kubectl create -f https://github.com/lander2k2/crashcart/raw/master/crashcart-po.yaml
 $ kubectl exec -it crashcart bash
 ```
 
